@@ -1,0 +1,138 @@
+* {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto Mono', monospace;
+}
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+body {
+  background-color: pink;
+
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main {
+  position: relative;
+  margin: 100px;
+
+  width: 100rem;
+  height: 60rem;
+  background-color: #ff6e6c;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+
+  /* will show conetnt side by side  */
+  display: flex;
+}
+.player {
+  top: 30%;
+  flex: 50%;
+  padding: 10px;
+  display: flex;
+
+  /* it will set all contents in column manner  */
+  flex-direction: column;
+
+  /* to align all items to centre  */
+  align-items: center;
+
+  /* will set all the animtion to have a 0.5 sec delay  */
+  transition: all 0.5s;
+}
+.name {
+  position: absolute;
+  top: 10%;
+}
+.score {
+  position: absolute;
+  top: 20%;
+  font-size: 50px;
+  font-weight: 300;
+}
+.dice {
+  position: absolute;
+  top: 30%;
+  left: 45%;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.25);
+  width: 100px;
+  height: 100px;
+  border-radius: 5px;
+}
+.name {
+  font-size: 50px;
+  word-spacing: 2px;
+  margin-bottom: 1rem;
+  z-index: 1;
+}
+.player--active {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.current {
+  top: 50%;
+
+  position: relative;
+  padding: 10px;
+  padding: 30px 70px;
+  margin-top: 100px;
+  background-color: white;
+  border-radius: 5px;
+
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.25);
+}
+.current-label {
+  font-size: 30px;
+  font-weight: bold;
+  align-items: center;
+}
+.current-score {
+  position: relative;
+  top: 20%;
+  left: 40%;
+  font-size: 30px;
+  font-weight: bold;
+  align-items: center;
+}
+.btn {
+  position: absolute;
+
+  border: none;
+
+  left: 45%;
+
+  padding: 10px 40px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 20px;
+  transition: all 0.2s;
+  cursor: pointer;
+  z-index: 0;
+}
+.btn:active {
+  transform: translate(-1%, 3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+.btn--new {
+  top: 3%;
+  left: 42%;
+}
+.btn--roll {
+  top: 70%;
+  left: 43%;
+}
+.btn--hold {
+  top: 82%;
+  left: 44.5%;
+}
+.hideen {
+  display: none;
+}
